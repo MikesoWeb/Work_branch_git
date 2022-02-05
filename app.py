@@ -3,8 +3,9 @@ from flask import Flask, Markup
 app = Flask('app')
 
 
+@app.get('/')
 def index():
-    name_branch = 'Main'
+    name_branch = 'Develop'
     return Markup(f"""
     <h1 style="
         display: flex;
@@ -17,8 +18,6 @@ def index():
     </h1>
     """)
 
-
-app.add_url_rule('/', view_func=index)
 
 if __name__ == '__main__':
     app.run(debug=True)
