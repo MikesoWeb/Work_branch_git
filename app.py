@@ -5,7 +5,7 @@ app = Flask('app')
 
 @app.get('/')
 def index():
-    name_branch = 'feature-style'
+    name_branch = 'MAIN'
     return render_template('index.html', name_branch=name_branch)
 
 
